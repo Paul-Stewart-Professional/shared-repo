@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uiO-4a-aZi">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tally-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="tallyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kuc-XH-U2b">
+                                <rect key="frame" x="34" y="263.66666666666669" width="325" height="325.00000000000006"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Kuc-XH-U2b" secondAttribute="height" multiplier="1:1" id="hze-hx-lhX"/>
+                                    <constraint firstAttribute="width" constant="325" id="naX-9P-H5V"/>
+                                </constraints>
+                                <color key="tintColor" red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="capsule">
+                                    <color key="baseBackgroundColor" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="buttonFullyPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lgv-aM-H0S"/>
+                                    <action selector="buttonHalfPressed:" destination="BYZ-38-t0r" eventType="touchDown" id="B4z-k6-cBh"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bBm-q6-YTN">
+                                <rect key="frame" x="16" y="126" width="361" height="41"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="35"/>
+                                <color key="textColor" systemColor="secondarySystemBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZDq-O4-QOF">
+                                <rect key="frame" x="139" y="654" width="114" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Reset"/>
+                                <connections>
+                                    <action selector="resetButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l79-wQ-QJO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Kuc-XH-U2b" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="43Y-2N-fy0"/>
+                            <constraint firstItem="bBm-q6-YTN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Fwv-0H-aZU"/>
+                            <constraint firstItem="bBm-q6-YTN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="67" id="etH-UV-yD8"/>
+                            <constraint firstItem="Kuc-XH-U2b" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="m10-x5-OOq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bBm-q6-YTN" secondAttribute="trailing" constant="16" id="qkp-BY-oov"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Tally" image="hand.tap.fill" catalog="system" id="Z7b-FH-xNg">
+                        <imageReference key="selectedImage" image="hand.tap.fill" catalog="system" variableValue="0.0"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="bigTallyButton" destination="Kuc-XH-U2b" id="jQj-Wh-tQJ"/>
+                        <outlet property="counterLabel" destination="bBm-q6-YTN" id="Ih6-Oa-Y6N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1057.2519083969464" y="4.9295774647887329"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="0Nh-GO-hDe">
+            <objects>
+                <viewController id="mHi-Nq-81C" customClass="SettingsViewController" customModule="tallyApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="i3g-SM-vXW">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="at6-3R-Sv1">
+                                <rect key="frame" x="34" y="263.66666666666669" width="325" height="325.00000000000006"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="325" id="fRa-tC-IXI"/>
+                                    <constraint firstAttribute="width" secondItem="at6-3R-Sv1" secondAttribute="height" multiplier="1:1" id="vRV-05-h9F"/>
+                                </constraints>
+                                <color key="tintColor" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="capsule">
+                                    <color key="baseBackgroundColor" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="stepUpCounterButtonPressed:" destination="mHi-Nq-81C" eventType="touchUpInside" id="jrV-Em-CnT"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Count by: 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fPl-5A-jPb">
+                                <rect key="frame" x="16" y="130" width="361" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="35"/>
+                                <color key="textColor" systemColor="secondarySystemBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B2e-c7-0qC">
+                                <rect key="frame" x="172" y="660" width="51" height="31"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Neg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xwy-nA-AfG">
+                                <rect key="frame" x="78" y="660" width="50" height="29"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="25"/>
+                                <color key="textColor" red="0.99215686270000003" green="1" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DMo-Vw-BQH">
+                                <rect key="frame" x="265" y="660" width="45" height="29"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="25"/>
+                                <color key="textColor" red="0.99215686270000003" green="1" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wAp-sp-XTY"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="at6-3R-Sv1" firstAttribute="centerY" secondItem="i3g-SM-vXW" secondAttribute="centerY" id="2EB-db-eT1"/>
+                            <constraint firstItem="wAp-sp-XTY" firstAttribute="bottom" secondItem="DMo-Vw-BQH" secondAttribute="bottom" constant="80" id="ByV-DL-kIA"/>
+                            <constraint firstItem="wAp-sp-XTY" firstAttribute="trailing" secondItem="DMo-Vw-BQH" secondAttribute="trailing" constant="83" id="WOF-t9-phL"/>
+                            <constraint firstItem="wAp-sp-XTY" firstAttribute="bottom" secondItem="Xwy-nA-AfG" secondAttribute="bottom" constant="80" id="ZOd-eF-puN"/>
+                            <constraint firstItem="Xwy-nA-AfG" firstAttribute="leading" secondItem="wAp-sp-XTY" secondAttribute="leading" constant="78" id="ezO-gj-cVH"/>
+                            <constraint firstItem="at6-3R-Sv1" firstAttribute="centerX" secondItem="i3g-SM-vXW" secondAttribute="centerX" id="hX1-9e-fwy"/>
+                            <constraint firstItem="B2e-c7-0qC" firstAttribute="leading" secondItem="Xwy-nA-AfG" secondAttribute="trailing" constant="44" id="jAM-Kv-TwB"/>
+                            <constraint firstItem="wAp-sp-XTY" firstAttribute="bottom" secondItem="B2e-c7-0qC" secondAttribute="bottom" constant="78" id="nng-gi-d30"/>
+                            <constraint firstItem="DMo-Vw-BQH" firstAttribute="leading" secondItem="B2e-c7-0qC" secondAttribute="trailing" constant="44" id="xmk-C1-ELH"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" image="gearshape.fill" catalog="system" selectedImage="gearshape.fill" id="u1V-yy-LPN"/>
+                    <connections>
+                        <outlet property="countByLabel" destination="fPl-5A-jPb" id="Z9v-EV-J6s"/>
+                        <outlet property="posNegSwitch" destination="B2e-c7-0qC" id="sFu-Yl-wT4"/>
+                        <outlet property="setCountByButton" destination="at6-3R-Sv1" id="RUb-hm-a4L"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rl9-q7-ATg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1892" y="5"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="mV6-7f-6xe">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="uiO-4a-aZi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8Y7-Uk-EjX">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <rect key="contentStretch" x="0.0" y="0.5" width="0.0" height="0.5"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="Tt7-E6-zJI"/>
+                        <segue destination="mHi-Nq-81C" kind="relationship" relationship="viewControllers" id="wcL-f7-eNa"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z6X-iK-jzM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.64122137404578" y="4.9295774647887329"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="gearshape.fill" catalog="system" width="128" height="123"/>
+        <image name="hand.tap.fill" catalog="system" width="115" height="128"/>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
